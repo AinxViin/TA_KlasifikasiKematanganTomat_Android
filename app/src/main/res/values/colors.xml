@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hijau_tua">#043915</color>
+    <color name="hijau_muda">#E0FFB7</color>
+    <color name="placeholder_bg">#E9EDF1</color>
+    <color name="placeholder_wave">#C7CDD3</color>
+</resources>

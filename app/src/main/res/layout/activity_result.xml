@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hijau_muda"
+    tools:context=".ResultActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/hijau_tua"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/hijau_tua"
+            app:title="MineTomat"
+            app:titleCentered="true"
+            app:titleTextColor="@color/hijau_muda" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/photoCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:0.78"
+        app:cardCornerRadius="16dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true"
+        app:cardBackgroundColor="@android:color/white">
+
+        <ImageView
+            android:id="@+id/ivhasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/ic_launcher_foreground"
+            tools:ignore="ContentDescription"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/infoPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_penjelasan"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photoCard">
+
+        <TextView
+            android:id="@+id/labelHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasil Klasifikasi"
+            android:textColor="@color/hijau_muda"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Matang"
+            android:textColor="@color/hijau_muda"
+            android:textSize="16sp"
+            tools:text="Matang" />
+
+        <TextView
+            android:id="@+id/labelKandungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Kandungan"
+            android:textColor="@color/hijau_muda"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvKandungan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Matang"
+            android:textColor="@color/hijau_muda"
+            android:textSize="16sp"
+            tools:text="Matang" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonselesai"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Selesai"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/hijau_muda"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        app:cornerRadius="14dp"
+        android:backgroundTint="@color/hijau_tua"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
